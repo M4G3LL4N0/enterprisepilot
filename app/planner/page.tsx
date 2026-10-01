@@ -164,6 +164,9 @@ export default function PlannerPage() {
           <p className="text-xs uppercase tracking-[0.16em] text-cyan-200">Draft package</p>
           <p className="mt-3 text-2xl font-semibold text-white">Readiness {draft.enterpriseReadinessScore}/100</p>
           <p className="mt-2 text-sm leading-6 text-slate-300">{draft.buyerSummary}</p>
+          <p className="mt-4 text-sm leading-6 text-slate-300">
+            Planning range, not a quote: about ${draft.roiCase.annualizedSavings.toLocaleString()} annualized value and a pilot cost near ${draft.roiCase.pilotCostEstimate.toLocaleString()} if the hours and rate you entered hold.
+          </p>
         </aside>
       ) : null}
     </main>
